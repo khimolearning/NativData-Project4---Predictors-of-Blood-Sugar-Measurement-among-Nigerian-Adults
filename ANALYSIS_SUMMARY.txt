@@ -1,0 +1,115 @@
+NativData Project 4: Predictors of Blood Sugar Measurement in Nigeria
+ANALYSIS SUMMARY
+================================================================================
+
+PROJECT QUESTION
+================
+Which socio-demographic and geographic factors are associated with whether an
+adult has ever had their blood sugar measured?
+
+This quantifies which groups are least likely to have been screened. The results
+can help prioritise where limited screening resources should go first, especially
+where overall measurement rates are low and health data systems are fragmented.
+
+DATA
+====
+Source: Nigeria Demographic and Health Survey (NDHS) 2023-24
+Sample after cleaning: 50,759 adults (women 15-49 and men 15-59)
+Outcome: Ever had blood sugar measured (Yes/No; "Don't know" excluded)
+Overall rate: 19.5% had ever been measured
+
+METHOD
+======
+1. Descriptive rates by sex, residence, education, wealth, zone, and age group
+2. Logistic regression with:
+   - Outcome: blood sugar ever measured
+   - Predictors: age, sex, residence, education, wealth, geopolitical zone
+   - Results reported as odds ratios (OR) with 95% confidence intervals
+
+KEY DESCRIPTIVE FINDINGS
+========================
+By wealth:
+  Poorest   4.0%
+  Poorer    8.8%
+  Middle   15.5%
+  Richer   23.1%
+  Richest  38.7%
+
+By education:
+  No education   6.6%
+  Primary       17.5%
+  Secondary     19.6%
+  Higher        43.2%
+
+By zone:
+  North Central   8.6%
+  North East      8.8%
+  North West     19.5%
+  South East     27.1%
+  South South    30.9%
+  South West     32.8%
+
+By residence: Urban 27.0% vs Rural 12.4%
+By age: rises from 6.9% (15-24) to 33.6% (45-59)
+
+LOGISTIC REGRESSION (ADJUSTED RESULTS)
+======================================
+Reference group: Man, rural, no education, poorest, North Central
+
+Strongest associations (odds ratios):
+  Richest vs poorest:           OR 5.06
+  Higher education vs none:     OR 3.65
+  Richer vs poorest:            OR 3.30
+  South South vs North Central: OR 1.91
+  Secondary education vs none:  OR 1.89
+  South West vs North Central:  OR 1.78
+  Age (per year):               OR 1.07
+
+Urban residence was not statistically significant after adjusting for wealth,
+education and zone (OR 1.05, p = 0.09). North East was not significantly
+different from North Central.
+
+INTERPRETATION
+==============
+After accounting for other factors together, wealth and education remain the
+strongest predictors of ever having blood sugar measured. People in the richest
+quintile have about five times the odds of the poorest. Those with higher
+education have about 3.7 times the odds of those with no education. Southern
+zones retain higher odds than North Central. The urban-rural gap largely
+disappears once wealth and education are included, suggesting that composition
+(who lives where) explains much of the crude urban advantage.
+
+WHAT THIS IS USEFUL FOR
+=======================
+The model does not predict who has diabetes. It quantifies who is least likely
+to have been screened at all. That evidence can support prioritisation of limited
+screening resources toward poorer, less educated, and some northern populations.
+
+LIMITATIONS
+===========
+- Self-reported measurement (not clinical records)
+- Cross-sectional survey (cannot prove causation)
+- NDHS age ranges: women 15-49, men 15-59
+- Does not include facility-level or continuous clinical data
+- Synthetic of real programme targeting would still need local validation
+
+OUTPUTS
+=======
+- data/processed/analysis_sugar_measured.csv
+- output/tables/descriptive_screening_rates.xlsx
+- output/tables/logistic_odds_ratios.csv
+- output/tables/logistic_summary.txt
+- output/figures/sugar_measured_by_wealth.png
+- output/figures/sugar_measured_by_zone.png
+- output/figures/sugar_measured_by_education.png
+
+Author: Olokhimo Osawere (Khimo)
+Project: NativData Project 4
+Date: October 2026
+
+
+Limitation
+This is not a clinical diabetes risk model. It models ever measured, not disease status.
+Author
+Olokhimo Osawere (Khimo) — NativData
+October 2026

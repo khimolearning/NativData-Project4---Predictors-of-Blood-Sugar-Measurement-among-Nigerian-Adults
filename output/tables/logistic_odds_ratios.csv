@@ -1,0 +1,17 @@
+,odds_ratio,CI_low,CI_high,p_value
+wealth_Richest,5.057,4.392,5.823,0.0
+edu_Higher,3.654,3.301,4.045,0.0
+wealth_Richer,3.303,2.884,3.783,0.0
+wealth_Middle,2.557,2.241,2.919,0.0
+zone_South South,1.908,1.74,2.091,0.0
+edu_Secondary,1.892,1.723,2.078,0.0
+wealth_Poorer,1.807,1.578,2.07,0.0
+zone_South West,1.776,1.616,1.951,0.0
+zone_South East,1.669,1.518,1.835,0.0
+zone_North West,1.55,1.419,1.692,0.0
+sex_Woman,1.474,1.388,1.564,0.0
+edu_Primary,1.419,1.275,1.58,0.0
+age,1.073,1.07,1.076,0.0
+zone_North East,1.071,0.964,1.191,0.202
+res_Urban,1.054,0.992,1.119,0.091
+const,0.002,0.002,0.003,0.0
